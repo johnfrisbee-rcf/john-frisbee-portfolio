@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-display: 'Fraunces', Georgia, serif;
+	--font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+	--color-ink: #142019;
+	--color-paper: #f4efe4;
+	--color-paper-2: #ebe4d4;
+	--color-forest: #1f4d32;
+	--color-leaf: #3d7a52;
+	--color-moss: #7ea888;
+	--color-line: #d4ccb8;
+	--color-mute: #5c675f;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	background: var(--color-forest);
+	color: var(--color-paper);
+}
