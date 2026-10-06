@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { linkedin, roles } from '#lib/content';
+	import john from '#lib/assets/john.jpg';
 
 	const link =
 		'underline decoration-2 underline-offset-[0.2em] transition-[text-decoration-color] duration-300';
@@ -20,15 +21,25 @@
 		</div>
 
 		<div
-			class="mx-auto mt-auto flex w-full max-w-6xl flex-col gap-8 px-4 pt-24 pb-10 md:flex-row md:items-end md:justify-between md:px-8 md:pb-16"
+			class="mx-auto mt-auto grid w-full max-w-6xl items-end gap-10 px-4 pt-10 pb-10 md:grid-cols-[1fr_auto] md:gap-16 md:px-8 md:pt-24 md:pb-16"
 		>
-			<h1 class="text-[clamp(3rem,12.5vw,6rem)] leading-[0.88] wide uppercase">
-				<span class="block overflow-clip"><span class="rise">John</span></span>
-				<span class="block overflow-clip"><span class="rise" style="--i: 1">Frisbee</span></span>
-			</h1>
-			<p class="fade max-w-[26ch] text-xl leading-snug md:text-right" style="--i: 3">
-				Finance Director at The Robotics Catalyst Foundation. Senior at Wilton High School.
-			</p>
+			<img
+				class="unveil aspect-[4/5] w-[min(62vw,22rem)] object-cover object-[60%_40%] md:order-last md:w-[min(32vw,24rem)]"
+				src={john}
+				alt="John Frisbee smiling in a classroom"
+				width="900"
+				height="1056"
+				style="--i: 2"
+			/>
+			<div>
+				<h1 class="text-[clamp(3rem,12.5vw,6rem)] leading-[0.88] wide uppercase">
+					<span class="block overflow-clip"><span class="rise">John</span></span>
+					<span class="block overflow-clip"><span class="rise" style="--i: 1">Frisbee</span></span>
+				</h1>
+				<p class="fade mt-8 max-w-[30ch] text-xl leading-snug md:mt-10" style="--i: 3">
+					Finance Director at The Robotics Catalyst Foundation. Senior at Wilton High School.
+				</p>
+			</div>
 		</div>
 	</header>
 

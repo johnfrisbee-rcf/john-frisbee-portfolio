@@ -69,12 +69,28 @@ p {
 	}
 }
 
+.unveil {
+	animation: unveil 1300ms var(--ease-out-expo) both;
+	animation-delay: calc(var(--i, 0) * 90ms + 100ms);
+}
+
+@keyframes unveil {
+	from {
+		clip-path: inset(100% 0 0 0);
+		transform: scale(1.06);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
 	}
 	.rise,
-	.fade {
+	.fade,
+	.unveil {
 		animation: none;
 	}
 }
